@@ -8,7 +8,7 @@ results = model.predict("ex1-26.png", conf=0.19)
 # 入力画像
 img = results[0].orig_img
 
-# 認識した物体領域を取得する．
+
 boxes = results[0].boxes
 print(len(boxes))
 
