@@ -1,5 +1,4 @@
-/ex1-26.png
-/ex2-26.png
-/ex2.py
-/kitamura.gitignore
-/yolov8x.pt
+yolo*.pt
+__pycache__/
+runs/
+debug/
