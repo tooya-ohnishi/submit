@@ -10,10 +10,14 @@ img = results[0].orig_img
 
 
 boxes = results[0].boxes
-print(len(boxes))
+
+count = 0
 
 for box in boxes:
     # 物体領域のxy座標を取得する．
+    if int(box.cls[0]) != 0:
+        continue
+    count += 1
     x1, y1, x2, y2 = map(int, box.xyxy[0])
     cv2.rectangle(
         img,
@@ -23,6 +27,7 @@ for box in boxes:
         thickness=3,
     )
 
+print(count)
 
 cv2.imshow("", img)
 cv2.waitKey(0)
